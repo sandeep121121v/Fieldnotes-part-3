@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="description" content="A quiet place to look for visual inspiration.">
+    <title>Fieldnotes — find a little inspiration</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fieldnotes home">
+        <span class="brand-mark" aria-hidden="true">f.</span>
+        <span>fieldnotes</span>
+      </a>
+      <span class="header-note"><span class="status-dot" aria-hidden="true"></span> A visual search journal</span>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">COLLECT A POINT OF VIEW <span>·</span> 01</p>
+          <h1 id="page-title">The world,<br><em>in pictures.</em></h1>
+          <p class="tagline">Follow a thought. Find the image that stays with you.</p>
+        </div>
+
+        <form id="search-form" class="search-panel">
+          <div class="panel-heading">
+            <span class="panel-index">01 / LOOK FOR</span>
+            <span class="panel-caption">Start anywhere</span>
+          </div>
+          <div class="search-row">
+            <label class="sr-only" for="search-input">Search for images</label>
+            <input id="search-input" name="q" type="search" placeholder="Try ‘morning light’" autocomplete="off">
+            <button id="search-button" type="submit"><span>Search</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="suggestions" aria-label="Suggested searches">
+            <span class="suggestion-label">A few starting points</span>
+            <div class="chip-row">
+              <button class="chip" type="button">Botanical</button>
+              <button class="chip" type="button">Slow travel</button>
+              <button class="chip" type="button">Little rituals</button>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <span>Press search when you’re ready</span>
+            <button id="clear-button" class="clear-button" type="button">Clear <span aria-hidden="true">×</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section class="results-section" aria-labelledby="results-title">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">YOUR VISUAL JOURNAL</p>
+            <h2 id="results-title">A page left open<span>.</span></h2>
+          </div>
+          <p class="result-count" aria-live="polite">Your collection <span>—</span></p>
+        </div>
+        <p id="search-message" class="search-message" role="status" aria-live="polite" hidden></p>
+        <div id="results" class="results-grid" aria-label="Image search results"></div>
+        <div class="empty-state">
+          <span class="empty-symbol" aria-hidden="true">✳</span>
+          <p class="empty-title">Search to see what you find.</p>
+          <p class="empty-copy">Your images will gather here, one good idea at a time.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>FIELDNOTES <span class="footer-dot">·</span> AN EXERCISE IN LOOKING</span>
+      <span>Take the scenic route <span aria-hidden="true">↗</span></span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
